@@ -4,6 +4,10 @@
     <string name="true_text">True</string>
     <string name="next_text">--></string>
     <string name="text_question" />
+    <string name="question_one">Is Bread Good?</string>
+    <string name="question_two">The Answer is True</string>
+    <string name="question_three">Does Life Suck?</string>
+
 
 
 </resources>

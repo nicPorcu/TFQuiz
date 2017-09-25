@@ -15,22 +15,15 @@ class Quiz {
     private int currentQuestion;
     private int score;
 
-    Quiz()
+    Quiz(ArrayList<Question> impQuestions)
     {
         questions= new ArrayList<Question>();
-
-
+        score=0;
 
         currentQuestion=0;
-        addQuestions();
+        questions.addAll(impQuestions);
     }
 
-    private void addQuestions() {
-        questions.add(new Question("Is Bread Good?",true));
-        questions.add(new Question("The answer is true",true));
-        questions.add(new Question("Does life suck?",false));
-
-    }
     void checkAnswer(boolean userAnswer)
     {
         if(questions.get(currentQuestion).CheckAnswer(userAnswer))
@@ -48,5 +41,20 @@ class Quiz {
             currentQuestion++;
         }
     }
+    boolean onLastQuestion()
+    {
+        return (currentQuestion == questions.size() - 1);
+    }
 
+     int getCurrentQuestion() {
+        return currentQuestion;
+    }
+
+    void setCurrentQuestion(int currentQuestion) {
+        this.currentQuestion = currentQuestion;
+    }
+
+    public int getScore() {
+        return score;
+    }
 }
